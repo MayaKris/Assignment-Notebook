@@ -12,7 +12,7 @@ class AssignmentList {
     var items : [AssignmentItem] {
         didSet {
             if let encodedData = try? JSONEncoder().encode(items) {
-                UserDefaults.standards.set(encodedData, forKey: "data")
+                UserDefaults.standard.set(encodedData, forKey: "data")
             }
         }
     }
