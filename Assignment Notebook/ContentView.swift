@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State pruvate var assignmentList = AssignmentList()
+    @State private var assignmentList = AssignmentList()
     var body: some View {
         NavigationView {
             List {
