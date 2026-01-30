@@ -25,6 +25,7 @@ struct AddAssignmentView: View {
                 TextField("Description", text: $description)
                 DatePicker("Due Date", selection: $dueDate, displayedComponents: .date)
             }
+            .background(Color.purple).opacity(0.7)
             .navigationBarTitle("Add New Assignment Item", displayMode: .inline)
             .navigationBarItems(trailing: Button("Save") {
                 if course.count > 0, description.count > 0 {
@@ -34,5 +35,6 @@ struct AddAssignmentView: View {
                 }
             })
         }
+        .accentColor(.purple)
     }
 }

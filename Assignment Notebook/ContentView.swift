@@ -30,6 +30,7 @@ struct ContentView: View {
                     assignmentList.items.remove(atOffsets: indexSet)
                 })
             }
+            .background(Color.purple).opacity(0.1)
             .sheet(isPresented: $showingAddAssignmentView) {
                 AddAssignmentView()
                     .environment(assignmentList)
@@ -40,8 +41,11 @@ struct ContentView: View {
                                     showingAddAssignmentView = true
                                     }, label: {
                                     Image(systemName: "plus")
+                                            .foregroundColor(.purple)
+                                            .font(.title2)
                                                     }))
         }
+        .accentColor(.purple)
     }
 }
 
