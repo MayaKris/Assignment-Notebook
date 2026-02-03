@@ -35,7 +35,13 @@ struct ContentView: View {
                 AddAssignmentView()
                     .environment(assignmentList)
             }
-            .navigationBarTitle("Assignment Notebook", displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("Assignment Notebook")
+                        .font(.custom("Pacifico", size: 27))
+                        .foregroundColor(.purple)
+                }
+            }
             .navigationBarItems(leading: EditButton(),
                                 trailing: Button(action: {
                                     showingAddAssignmentView = true
